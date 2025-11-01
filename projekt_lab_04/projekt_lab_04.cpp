@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <stdlib.h>
 using namespace std;
 float FtoC(float temp);
 float FtoK(float temp);
@@ -75,15 +76,20 @@ void menu()
 }
 int main()
 {
-	menu();
-	char stopnie;
-	int a;
-	float temp;
-	float temp2;
-	cout << "Podaj cyfre od 1 do 7: " << endl;
-	cin >> a; 
-	switch (a)
+	int powrot = 1;
+	while (powrot == 1)
 	{
+		system("cls");
+		menu();
+		char stopnie;
+		char e;
+		int a;
+		float temp;
+		float temp2;
+		cout << "Podaj cyfre od 1 do 7: " << endl;
+		cin >> a;
+		switch (a)
+		{
 		case 1:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
@@ -91,68 +97,141 @@ int main()
 			temp2 = FtoC(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
-		case 2: 
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+		case 2:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
 			stopnie = 'F';
 			temp2 = FtoK(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
-			else 
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
-		case 3: 
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+		case 3:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
 			stopnie = 'C';
 			temp2 = CtoF(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
-		case 4: 
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+		case 4:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
 			stopnie = 'C';
 			temp2 = CtoK(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
-		case 5: 
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+		case 5:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
 			stopnie = 'K';
 			temp2 = KtoC(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
-		case 6: 
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
+		case 6:
 			cout << "Podaj temperature, ktora chcesz przeliczyc: ";
 			cin >> temp;
 			stopnie = 'K';
 			temp2 = KtoF(temp);
 			check(temp, stopnie);
 			if (check(temp, stopnie) == -999.0)
-				return 0;
+			{
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 			else
+			{
 				cout << temp << " --> " << temp2 << endl;
-			return 0;
+				cout << "Nacisnij e" << endl;
+				cin >> e;
+				if (e == 'e')
+					powrot = 1;
+				continue;
+			}
 		default:
 			return 0;
-	} 
+		}
+	}
 }
 
 
